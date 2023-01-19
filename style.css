@@ -120,6 +120,10 @@
      display: block;
      color: black 
 }
+.attribution { 
+    font-size: 11px; text-align: center; color: white;padding-top: 2rem;}
+.attribution a { color: hsl(129, 66%, 36%); }
+
 /******************** media ********************/
  @media(min-width:600px){
      html{
@@ -137,10 +141,6 @@
          background-color: var(--color_Very_Dark_Blue);
     }
      .container{
-        /* max-width: 600px;
-         */
-        /* background-color: var(--color_Dark_Blue);
-         */
          color: var(--color_Pale_Blue);
          padding: 3rem;
          border-radius: 0.8rem;
@@ -148,13 +148,13 @@
      main{
          flex-direction: row;
          align-items: flex-end;
+         margin-top: 1rem;
     }
      .components{
-        /* width: 55%;
-         */
          border-top-right-radius: 6rem;
          height: 13rem;
          margin-right: 2rem;
+         margin-bottom: 0;
     }
      .used-storage-text{
          text-align: start;
@@ -183,5 +183,7 @@
          right: 0;
          transform: translateY(98%);
     }
+    .attribution { 
+        padding-top: 0;    }
 }
  
