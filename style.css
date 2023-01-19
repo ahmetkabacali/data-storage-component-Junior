@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url("./utilities.css");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ body {
+     font-family: 'Raleway', sans-serif;
+     background: url("./images/bg-mobile.png") no-repeat center;
+     background-color: var(--color_Very_Dark_Blue);
+     background-size: contain;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+ main{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 1.5rem;
+     width: 100%;
+}
+ .container{
+     max-width: 360px;
+     background-color: var(--color_Dark_Blue);
+     color: var(--color_Pale_Blue);
+     padding: 3rem;
+     border-radius: 0.8rem;
+}
+/******************* components ********************/
+ .components{
+     width: 100%;
+     border-top-right-radius: 6rem;
+     height: 13rem;
+     margin-bottom: 2rem;
+}
+ .components-items{
+     display: flex;
+     align-items: flex-end;
+     height: 50px;
+     margin-top: 1.2rem;
+}
+ .components-items .img-wrapper{
+     background-color: var(--color_Very_Dark_Blue);
+     border-radius: 1rem;
+     padding: 1rem;
+     margin-right: 1rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+}
+/******************* data ********************/
+ .used-storage-box{
+     background-color: var(--color_Dark_Blue);
+     width: 100%;
+     text-align: center;
+}
+ .used-storage-text{
+     text-align: center;
+     font-size: small;
+}
+ .used-storage-text .used-data{
+     font-weight: bold;
+}
+ .loaded-bar-wrapper{
+     background-color: var(--color_Very_Dark_Blue);
+     border-radius: 1rem;
+     height: 17px;
+     box-shadow: 0 0 0.09rem 0.09rem var(--color_Very_Dark_Blue);
+     position: relative;
+     margin: 1rem 0;
+}
+ .loaded-bar{
+     height: 100%;
+     width: 75%;
+     background: linear-gradient(90deg, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
+     border-radius: 1rem;
+     position: relative;
+}
+ .loaded-bar-point{
+     background-color: var(--color_Pale_Blue);
+     height: 11px;
+     width: 11px;
+     position: absolute;
+     top: 50%;
+     right: 1px;
+     border-radius: 50%;
+     transform: translateY(-50%);
+}
+ .min-max-storage{
+     display: flex;
+     justify-content: space-between;
+     font-size: small;
+}
+/******************** left-storage-box ********************/
+ .left-storage-box{
+     position: absolute;
+     bottom: -115px;
+     left: 50%;
+     background-color: white;
+     border-radius: 1rem;
+     padding: 0.8rem;
+     transform: translate(-50%);
+     width: 65%;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     font-size: 0.8rem;
+     font-weight: 700;
+     color: rgb(0, 0, 0,0.4);
+}
+ .left-storage-box span{
+     font-weight: 700;
+     font-size:2.3rem;
+     display: block;
+     color: black 
+}
+/******************** media ********************/
+ @media(min-width:600px){
+     html{
+         background-color: aquamarine;
+    }
+     body {
+         background: url("./images/bg-desktop.png") no-repeat contain;
+         background-size: 100%;
+    }
+}
+ @media(min-width:1000px){
+     body {
+         background: url("./images/bg-desktop.png") no-repeat bottom;
+         background-size: 100% 50vh;
+         background-color: var(--color_Very_Dark_Blue);
+    }
+     .container{
+        /* max-width: 600px;
+         */
+        /* background-color: var(--color_Dark_Blue);
+         */
+         color: var(--color_Pale_Blue);
+         padding: 3rem;
+         border-radius: 0.8rem;
+    }
+     main{
+         flex-direction: row;
+         align-items: flex-end;
+    }
+     .components{
+        /* width: 55%;
+         */
+         border-top-right-radius: 6rem;
+         height: 13rem;
+         margin-right: 2rem;
+    }
+     .used-storage-text{
+         text-align: start;
+    }
+     .used-storage-box{
+         justify-self: left;
+         min-width: 600px;
+    }
+     .left-storage-box{
+         position: absolute;
+         bottom: 70px;
+         right: 0px;
+         width: 170px;
+         transform: none;
+         left:unset;
+         border-bottom-right-radius: 0!important;
+    }
+     .triangle-down{
+         position: inherit;
+         width: 0;
+         height: 0;
+         border-left: 30px solid transparent;
+         border-right: 0px solid transparent;
+         border-top: 25px solid rgb(255, 255, 255);
+         bottom: 0;
+         right: 0;
+         transform: translateY(98%);
+    }
+}
+ 
